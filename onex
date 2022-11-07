@@ -814,9 +814,10 @@ about() {
   clear
   echo "$logo"
   echo " \033[01;33mOnex \033[01;31mv0.1\033[00m"
-  echo " Onex is a library of all"
-  echo " hakcing tools for termux"
-  echo " and other linux distribution."
+  echo " Onex jest narzędziem wielo funkcyjnym"
+  echo " w nim znajdują się różne i wszelakie skrypty"
+  echo " pisane przez mistrzów"
+  echo " przetłumaczone przez: Director Komrade oraz DigitalDark"
   echo -n "$prompt "
   read tmp
 }

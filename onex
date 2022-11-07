@@ -3,12 +3,17 @@
 # Date : 24 November 2019
 # onex is a hacking tools installer and package manager for hacker's.
 
-logo="\033[01;33m
-  ___  _ __   ___\033[01;31m__  __
-\033[01;33m / _ \\| '_ \\ / _ \033[01;31m\\ \\/ /
-\033[01;33m| (_) | | | |  __/\033[01;31m>  < 
-\033[01;33m \___/|_| |_|\\___\033[01;31m/_/\_\\
-"
+logo=
+\033[01;33m ▒█████   ███▄    █ ▓█████ ▒██   ██▒    ██▓███   ██▓    \\
+\033[01;33m▒██▒  ██▒ ██ ▀█   █ ▓█   ▀ ▒▒ █ █ ▒░   ▓██░  ██▒▓██▒    \\
+\033[01;33m▒██░  ██▒▓██  ▀█ ██▒▒███   ░░  █   ░   ▓██░ ██▓▒▒██░    \\
+\033[01;33m▒██   ██░▓██▒  ▐▌██▒▒▓█  ▄  ░ █ █ ▒    ▒██▄█▓▒ ▒▒██░    \\
+\033[01;33m░ ████▓▒░▒██░   ▓██░░▒████▒▒██▒ ▒██▒   ▒██▒ ░  ░░██████▒\\
+\033[01;33m░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░░ ▒░ ░▒▒ ░ ░▓ ░   ▒▓▒░ ░  ░░ ▒░▓  ░\\
+\033[01;33m  ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ░  ░░░   ░▒ ░   ░▒ ░     ░ ░ ▒  ░\\
+\033[01;33m░ ░ ░ ▒     ░   ░ ░    ░    ░    ░     ░░         ░ ░   \\
+\033[01;33m    ░ ░           ░    ░  ░ ░    ░                  ░  ░\\
+                                                        
 prompt="\007\033[00m[\033[01;34monex\033[00m@\033[01;34mspace\033[00m]$"
 
 if [ -d $HOME ]; then
@@ -119,7 +124,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -135,13 +140,13 @@ install() {
               $sudo $pac install $tool_pac -y
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mJesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -157,17 +162,17 @@ install() {
               $pac install $tool_pac -y
             fi
           else
-            echo "\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
+            echo "\033[01;31m!! \033[00m: Jesteś \033[01;31moffline !!\033[00m!!\033[00m"
           fi
         fi
         # check tool is installed or not
         if [ ! -e $bin/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for github tools
@@ -179,7 +184,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -195,13 +200,13 @@ install() {
               $sudo git clone $tool_url ~/$tool_name
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mJesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -217,17 +222,17 @@ install() {
               git clone $tool_url ~/$tool_name
             fi
           else
-            echo "\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
+            echo "\033[01;31m!! \033[00m: Jesteś \033[01;31moffline !!\033[00m!!\033[00m"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+        if [ ! -e $bin/$tool_pac ]; then
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for curl tools
@@ -239,7 +244,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mIntsalowanie ...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -261,12 +266,12 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mIntsalowanie\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
               for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
+                # Intsalowanie dependency
                 if [ ! -e $bin/$dep_name ]; then
                   $pac install $dep_name -y
                 fi
@@ -282,12 +287,13 @@ install() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for wget tools
@@ -299,7 +305,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -321,7 +327,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -342,12 +348,13 @@ install() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
     # for any new installer
     # put here
@@ -382,7 +389,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -404,7 +411,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -425,12 +432,13 @@ install_category_tool() {
         fi
         # check tool is installed or not
         if [ ! -e $bin/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for github tools
@@ -442,7 +450,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -464,7 +472,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -485,12 +493,13 @@ install_category_tool() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for curl tools
@@ -502,7 +511,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -524,7 +533,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -545,12 +554,13 @@ install_category_tool() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for wget tools
@@ -562,7 +572,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -584,7 +594,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -605,12 +615,13 @@ install_category_tool() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
     # for any new installer
     # put here
@@ -627,7 +638,7 @@ all_tools() {
     clear
     # get all tools data
     echo " \033[01;31m___
-//___// \033[01;33mAll Tools
+//___// \033[01;33mWszystkie Narzędzia
 "
     for data in `grep "." $tools_data | sort -f | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
       # display tools name from data
@@ -816,11 +827,11 @@ menu() {
     clear
     tools=`grep -n '.' $tools_data | wc -l`
     echo "$logo"
-    echo " \033[00m[1] \033[01;32mAll tools \033[00m(\033[01;31m$tools tools\033[00m)"
-    echo " \033[00m[2] \033[01;32mTools category"
-    echo " \033[00m[3] \033[01;32mUpdate onex"
-    echo " \033[00m[4] \033[01;32mAbout us"
-    echo " \033[00m[5] \033[01;32mExit"
+    echo " \033[00m[1] \033[01;32mWszystkie Narzędzia \033[00m(\033[01;31m$tools tools\033[00m)"
+    echo " \033[00m[2] \033[01;32mKategorie Narzędzii"
+    echo " \033[00m[3] \033[01;32mZaaktualizuj Onexa"
+    echo " \033[00m[4] \033[01;32mO nas"
+    echo " \033[00m[5] \033[01;32mWyjscie"
     echo -n "$prompt "
     read cmd
     case $cmd in
@@ -837,11 +848,11 @@ menu() {
         about
       ;;
       5|exit|Exit)
-        echo "\007\033[01;32mExiting ....\033[00m"
+        echo "\007\033[01;32mWychodzenie ....\033[00m"
         break
       ;;
       *)
-        echo "\007\033[00m'$cmd': \033[01;31minvalid option!!\033[00m"
+        echo "\007\033[00m'$cmd': \033[01;31mzła opcja!!\033[00m"
         sleep 1
       ;;
     esac
@@ -911,7 +922,7 @@ cli_update() {
   # check user is online or not
   wget -q --spider http://google.com
   if [ $? -eq 0 ]; then
-    echo "\033[01;32mUpdating ...\033[00m"
+    echo "\033[01;32mAktualizowanie ...\033[00m"
     sleep 1
     if [ -e $bin/git ]; then
       if [ $sudo ]; then
@@ -932,9 +943,9 @@ cli_update() {
         update_process
       fi
     fi
-    echo "\033[00m'onex' \033[01;32mupdated successfully !!\033[00m"
+    echo "\033[00m'onex' \033[01;32mZaaktualizowano Pomyślnie !!\033[00m"
   else
-    echo "\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
+    echo "\033[01;31mSorry \033[00m: Jesteś \033[01;31moffline \033[00m!!\033[00m"
   fi
 }
 
@@ -963,7 +974,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mIInstalowanie ...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -979,13 +990,13 @@ install_process() {
               $sudo $pac install $tool_pac -y
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mJesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie ...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1001,17 +1012,17 @@ install_process() {
               $pac install $tool_pac -y
             fi
           else
-            echo "\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
+            echo "\033[01;31m!! \033[00m: Jesteś \033[01;31moffline \033[00m!!\033[00m"
           fi
         fi
         # check tool is installed or not
         if [ ! -e $bin/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31Nie jest Zainstalowane\033[00m"
         else
           echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32mJest już zainstalowane !!\033[00m"
       fi
 
     # for github tools
@@ -1023,7 +1034,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mIInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1045,7 +1056,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1066,12 +1077,13 @@ install_process() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for curl tools
@@ -1083,7 +1095,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1105,7 +1117,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1126,12 +1138,13 @@ install_process() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
     # for wget tools
@@ -1144,7 +1157,7 @@ install_process() {
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
             # install tool dependency
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             if [ $tool_dependency != "null" ]; then
               for dep_name in `echo $tool_dependency | tr ',' ' '`; do
@@ -1165,7 +1178,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "\033[01;32mInstalling ...\033[00m"
+            echo "\033[01;32mInstalowanie...\033[00m"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1186,12 +1199,13 @@ install_process() {
         fi
         # check tool is installed or not
         if [ ! -e ~/$tool_pac ]; then
-          echo "\033[01;31mSorry \033[00m: '$tool_name' \033[01;31mis not installed !!\033[00m"
+
+          echo "\033[01;31mNarzędzie \033[00m: '$tool_name' \033[01;31mNie jest zainstalowane !!\033[00m"
         else
-          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis installed successfully !!\033[00m"
+          echo "\033[00m'$tool_name' \033[00m: \033[01;32mis zoatało sainstalowane pomyślnie !!\033[00m"
         fi
       else
-        echo "\033[01;31mSorry \033[00m: \033[00m'$tool_name' \033[01;32mis already installed !!\033[00m"
+        echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
     # for any new installer
     # put here
@@ -1276,6 +1290,8 @@ if [ $# -eq 1 ]; then
       cli_remove
     ;;
     help|-h)
+
+    # DO PRZETLUMACZENIA
       echo "\033[01;33mOnex \033[01;31mv0.1"
       echo "\033[00mUsage \033[00m: \033[01;33m onex \033[00m[option]... [toolname]...\033[00m"
       echo "\n  \033[01;34mOption  \tDescription\033[00m"

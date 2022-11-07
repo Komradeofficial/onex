@@ -1,14 +1,14 @@
-Information Gathering|information_gathering
-Vulnerability Scanner|vulnerability_scanner
-Exploitation Tools|exploitation_tools
-Wireless Testing|wireless_testing
-Forensics Tools|forensics_tools
-Web Hacking|web_hacking
-Stress Testing|stress_testing
-Sniffing & Spoofing|sniffing_spoofing
-Password Attacks|password_attack
-Maintaining Access|maintaining_access
-IP-Tracking tools|ip_tracking
-Programming Languages|programming_language
-DDOS Attacks|ddos
-Web Server's|web_server
+Zbieranie Informacji|uzyskiwanje_inf
+ narzędzia szukające słabego punktu|narzędzia vurn
+ narzędzia exploitowe|exp_tools
+ testowanie penetracyjne bezprzewodowo|wireless_pentr
+ narzędzia "kryminalistyczne"|k_tools
+ narzędzia do stron|narzędzia_web
+ testowanie strees/penetracja|narzędzia_penetracyjne
+ narzędzia do spoofing'u|narzędzia_do_sp
+ łamanie haseł bruteforce|łamanie_bruteforce
+ dostęp|dostęp
+ narzędzia namierzające|narz_namierz
+ języki programowania|języki_prog
+ Ataki DDoS|ataki_ddos
+ Strony Internetowe|strony_internetowe

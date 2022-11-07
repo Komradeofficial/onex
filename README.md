@@ -38,7 +38,7 @@ Otwórz Terminal i wpisz komendy podane poniżej:
 ## Jak używać onexa ?
 
 ### CLI Mode :
-`onex -h` or `onex help` for help.
+`onex -h` albo `onex help` żeby uzyskać pomoc.
 
 Opcje :
 - `onex install [nazwa narzędzia]` zainstaluj wybrane narzędzie.

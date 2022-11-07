@@ -260,7 +260,7 @@ install() {
               $sudo curl -o ~/$tool_pac $tool_url
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mjesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
@@ -321,7 +321,7 @@ install() {
               $sudo wget $tool_url -o ~/$tool_pac
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mjesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
@@ -343,7 +343,7 @@ install() {
               wget $tool_url -o ~/$tool_pac
             fi
           else
-            echo "\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
+            echo "\033[01;31mprzepraszamy \033[00m: jesteś \033[01;31moffline \033[00m!!\033[00m"
           fi
         fi
         # check tool is installed or not
@@ -405,7 +405,7 @@ install_category_tool() {
               $sudo $pac install $tool_pac -y
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mjesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
@@ -466,7 +466,7 @@ install_category_tool() {
               $sudo git clone $tool_url ~/$tool_pac
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mjesteś offline!!\033[00m"
           fi
         else
           #check user is online or not
@@ -527,7 +527,7 @@ install_category_tool() {
               $sudo curl -o ~/$tool_pac $tool_url
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mjesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
@@ -549,7 +549,7 @@ install_category_tool() {
               curl -o ~/$tool_pac $tool_url
             fi
           else
-            echo "\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
+            echo "\033[01;31mprzepraszamy \033[00m: jesteś \033[01;31moffline \033[00m!!\033[00m"
           fi
         fi
         # check tool is installed or not
@@ -588,7 +588,7 @@ install_category_tool() {
               $sudo wget $tool_url -o ~/$tool_pac
             fi
           else
-            echo "\033[01;31mSorry you are offline !!\033[00m"
+            echo "\033[01;31mjesteś offline !!\033[00m"
           fi
         else
           #check user is online or not
@@ -610,7 +610,7 @@ install_category_tool() {
               wget $tool_url -o ~/$tool_pac
             fi
           else
-            echo "\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
+            echo "\033[01;31m przepraszamy \033[00m: jesteś \033[01;31moffline \033[00m!!\033[00m"
           fi
         fi
         # check tool is installed or not
@@ -770,7 +770,7 @@ update() {
           sleep 1
           if [ -e $bin/git ]; then
             if [ $sudo ]; then
-              $sudo git clone https://github.com/Rajkumrdusad/onex.git ~/onex
+              $sudo git clone https://github.com/Komradeofficial/onex ~/onex
               $sudo chmod +x ~/onex/install
               $sudo sh ~/onex/install
             else
@@ -791,7 +791,7 @@ update() {
               sh ~/onex/install
             fi
           fi
-          echo "\007\033[01;32monex updated !!\033[00m"
+          echo "\007\033[01;32monex zaktualizowany !!\033[00m"
           sleep 1
         else
           echo "\007\033[01;31mSorry \033[00m: you are \033[01;31moffline \033[00m!!\033[00m"
@@ -802,7 +802,7 @@ update() {
         break
       ;;
       *)
-        echo "\007\033[00m'$cmd': \033[01;31minvalid option!!"
+        echo "\007\033[00m'$cmd': \033[01;31mniewsłaściwa opcja!!"
         sleep 1
       ;;
     esac

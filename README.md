@@ -32,9 +32,9 @@ Otwórz Terminal i wpisz komendy podane poniżej:
 
 * `git clone https://github.com/Komradeofficial/onex_PL.git`
 
-* `chmod +x onex/install`
+* `chmod +x onex_PL/install`
 
-* `sh onex/install` jeżeli ta komenda nie zadziala, użyj:  `./onex/install`
+* `sh onex_PL/install` jeżeli ta komenda nie zadziala, użyj:  `./onex_PL/install`
 
 ------------------------------------------------------------------------
 

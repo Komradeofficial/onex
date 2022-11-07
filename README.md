@@ -6,8 +6,8 @@ Używając onexa, możesz zainstalować **ponad 370+ narzędzi hakerskich** hake
 
 <br>
 <p align="center">
-<img width="47%" src="https://github.com/Rajkumrdusad/onex/blob/master/doc/Screenshot_2019-12-01-12-10-02-1.png"/>
-<img width="46%" src="https://github.com/Rajkumrdusad/onex/blob/master/doc/Screenshot_2019-12-01-12-09-26-1.png"/>
+<img width="47%" src="https://user-images.githubusercontent.com/84919892/200321532-5a2599ee-3465-4ab5-bac4-9e16a1e4364d.png"/>
+<img width="46%" src="https://user-images.githubusercontent.com/84919892/200321609-a2e8eeac-a626-43ac-a59f-552143840e46.png"/>
 </p>
 
 ------------------------------------------------------------------------

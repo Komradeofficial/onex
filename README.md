@@ -1,6 +1,5 @@
 # Onex v0.1
 
-***"onex a hacking tools library."***
 Onex is a kali linux hacking tools installer for termux and other linux distribution. It's package manager for hacker's.
 onex manage large number's of hacking tools that can be installed on single click. Using onex, you can install all hacking tools in Termux and other Linux based distributions.
 onex can install **more than 370+ kali linux hacking tools**. use `onex install [tool_name]` command to install any hacking tool.
@@ -13,17 +12,17 @@ onex can install **more than 370+ kali linux hacking tools**. use `onex install 
 
 ------------------------------------------------------------------------
 
-## Operating System Requirements
+## Wymagania Systemowe
 
-onex works on any of the following operating systems:<br>
-- **Android** (Using the Termux App) <br>
-- **Linux** (Linux Based Systems) <br>
+onex działa na wszystkich wymienionych poniżej systemach:<br>
+- **Android** (Przy Użyciu Termuxa) <br>
+- **Linux** (Systemy bazowane na Linuxie) <br>
 
 ------------------------------------------------------------------------
 
-## How to Install
+## Jak Zainstalować?
 
-Open the terminal and type following commands.
+Otwórz Terminal i wpisz komendy podane poniżej:
 
 * `apt update`
 
@@ -37,26 +36,26 @@ Open the terminal and type following commands.
 
 ------------------------------------------------------------------------
 
-## How to use onex ?
+## Jak używać onexa ?
 
 ### CLI Mode :
 `onex -h` or `onex help` for help.
 
-Options :
-- `onex install [tool_name]` install any tool.
-- `onex -i [tool_name]` install any tool.
-- `onex search [tool_name]` search any tool.
-- `onex -s [tool_name]` search any tool.
-- `onex list` list all tools.
-- `onex list -a` list all tools.
-- `onex -l` list all tools.
-- `onex -l -a` list all tools.
-- `onex help` get help.
-- `onex -h` get help.
+Opcje :
+- `onex install [nazwa narzędzia]` zainstaluj wybrane narzędzie.
+-  Skrót: `onex -i [nazwa narzędzia]`
+- `onex search [nazwa narzędzia]` wyszukaj narzędzie.
+- Skrót: `onex -s [nazwa narzędzia]` 
+- `onex list` lista wszystkich narzędzi.
+- `onex list -a` lista wszystkich narzędzi.
+- `onex -l` lista wszystkich narzędzi.
+- `onex -l -a` lista wszystkich narzędzi.
+- `onex help` pomoc.
+- Skrót `onex -h`
 
 ### Menu Mode :
 
-`onex start` to start onex menu mode.
+`onex start` żeby uruchomić menu mode onexa.
 
 Enter a Number for a specific output:
 - (1) : To show all available tools and type the number of a tool which you want to install.

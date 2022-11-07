@@ -34,7 +34,7 @@ Otwórz Terminal i wpisz komendy podane poniżej:
 
 * `chmod +x onex/install`
 
-* `sh onex/install` if not work than use `./onex/install`
+* `sh onex/install` jeżeli ta komenda nie zadziala, użyj:  `./onex/install`
 
 ------------------------------------------------------------------------
 

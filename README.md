@@ -36,6 +36,8 @@ Otwórz Terminal i wpisz komendy podane poniżej:
 
 * `sh install.sh` jeżeli ta komenda nie zadziala, użyj:  `./install`
 
+* `komenda jednorazowa: apt update -y && pkg install git && git clone https://github.com/Komradeofficial/onex && cd onex && chmod +x * && ./install `
+
 ------------------------------------------------------------------------
 
 ## Jak używać onexa ?

@@ -26,22 +26,22 @@ onex działa na wszystkich wymienionych poniżej systemach:<br>
 
 Otwórz Terminal i wpisz komendy podane poniżej:
 
-* `apt update`
+* `apt update -y`
 
 * `apt install git`
 
-* `git clone https://github.com/Komradeofficial/onex_PL.git`
+* `git clone https://github.com/Komradeofficial/onex.git`
 
-* `chmod +x onex_PL/install`
+* `chmod +x *`
 
-* `sh onex_PL/install` jeżeli ta komenda nie zadziala, użyj:  `./onex_PL/install`
+* `sh install.sh` jeżeli ta komenda nie zadziala, użyj:  `./install`
 
 ------------------------------------------------------------------------
 
 ## Jak używać onexa ?
 
 ### CLI Mode :
-`onex -h` or `onex help` for help.
+`onex -h dla okna pomocy lub Onex help`.
 
 Opcje :
 - `onex install [nazwa narzędzia]` zainstaluj wybrane narzędzie.

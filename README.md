@@ -1,5 +1,7 @@
 # Onex v0.1
 
+<img widht="50%" src 
+
 Onex to instalator i menedżer narzędzi hakerskich na dystrybucje Linuxa. 
 onex zarządza dużą liczbą narzędzi, które można zainstalować jednym kliknięciem. 
 Używając onexa, możesz zainstalować **ponad 370+ narzędzi hakerskich** hakerskie opartych na Linuksie.

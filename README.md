@@ -28,15 +28,17 @@ Otwórz Terminal i wpisz komendy podane poniżej:
 
 * `apt update -y`
 
-* `apt install git`
+* `pkg install git`
 
 * `git clone https://github.com/Komradeofficial/onex.git`
+
+* `cd onex`
 
 * `chmod +x *`
 
 * `sh install.sh` jeżeli ta komenda nie zadziala, użyj:  `./install`
 
-* `komenda jednorazowa: apt update -y && pkg install git && git clone https://github.com/Komradeofficial/onex && cd onex && chmod +x * && ./install `
+* `komenda jednorazowa: apt update -y && pkg install git && git clone https://github.com/Komradeofficial/onex && cd onex && chmod +x * && ./install`
 
 ------------------------------------------------------------------------
 

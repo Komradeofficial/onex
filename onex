@@ -565,7 +565,7 @@ install_category_tool() {
         echo "\033[01;31mNarzędzie \033[00m: \033[00m'$tool_name' \033[01;32jest już zainstalowane !!\033[00m"
       fi
 
-    # for wget tools
+    # super secret video :3 [one sec]
     elif [ $tool_installer = "wget" ]; then
       # check tool is already installed or not
       if [ ! -e ~/$tool_pac ]; then
